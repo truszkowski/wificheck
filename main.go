@@ -14,16 +14,8 @@ import (
 	"time"
 )
 
-// wlan0     IEEE 802.11  ESSID:"UPC76B96F5"  
-//           Mode:Managed  Frequency:2.452 GHz  Access Point: 54:67:51:27:EF:FA   
 //           Bit Rate=65 Mb/s   Tx-Power=20 dBm   
-//           Retry short limit:7   RTS thr:off   Fragment thr:off
-//           Encryption key:off
-//           Power Management:off
 //           Link Quality=51/70  Signal level=-59 dBm  
-//           Rx invalid nwid:0  Rx invalid crypt:0  Rx invalid frag:0
-//           Tx excessive retries:18  Invalid misc:2647   Missed beacon:0
-
 var (
 	rgxpBitRate     = regexp.MustCompile(`Bit Rate=([0-9.]+) Mb/s`)
 	rgxpLinkQuality = regexp.MustCompile(`Link Quality=([0-9.]+)/([0-9.]+)`)
