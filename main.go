@@ -37,10 +37,10 @@ func main() {
 
 	for {
 		if bitRate, linkQuality, err := check(iface); err != nil {
-			log.Printf("FAILED %v\n", err)
+			log.Printf("FAILED %v", err)
 			conn.Printf("wificheck.run.failed:1|g\n")
 		} else {
-			log.Printf("OK bit rate: %.3f, quality: %.3f\n", bitRate, linkQuality)
+			log.Printf("OK bit rate: %.3f, quality: %.3f", bitRate, linkQuality)
 			conn.Printf("wificheck.run.ok:1|g\n")
 			conn.Printf("wificheck.bit_rate:%.3f|g\n", bitRate)
 			conn.Printf("wificheck.quality:%.3f|g\n", linkQuality)
